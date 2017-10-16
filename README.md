@@ -1,5 +1,5 @@
 # react-toolbox-datatable
-react-toolbox datatable component
+react-toolbox datatable component with filter, sorting, pagination built-in.  
 
 # on large viewport
 ![Datatable](/demo-lg-screen.png?raw=true)
@@ -10,5 +10,5 @@ react-toolbox datatable component
 # on small viewport
 ![Datatable](/demo-sm-screen.png?raw=true)
 
-npm install
+npm install  
 npm start
