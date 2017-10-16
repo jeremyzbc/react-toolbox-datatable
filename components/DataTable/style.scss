@@ -1,0 +1,188 @@
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/globals";
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: $layout-breakpoint-xxs,
+  sm: $layout-breakpoint-sm-tablet,
+  md: $layout-breakpoint-lg-tablet,
+  lg: $layout-breakpoint-lg,
+  xl: $layout-breakpoint-xl
+);
+
+.datatable-header{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: -2.6rem;
+	align-items: center;
+	padding: 0 1.6rem;
+
+	.search{
+		margin-right: auto;
+	}
+}
+
+.thead-cell{
+	display: flex;
+	padding: 0 .5rem;
+	white-space: normal;
+	align-self: center;
+	// prevent FAB menu overlapping
+	overflow: hidden;
+
+	& > *{
+		align-self: center;
+		line-height: 2rem;
+	}
+
+	&:first-child{
+		padding-left: 0;
+	}
+
+	&:last-child{
+		flex: 1;
+		padding-right: 0;
+	}
+
+	.fab{
+		margin: -2rem 0 -2rem 1.6rem;
+		.hint{
+			top: 3rem;
+		}
+	}
+
+	.sort{
+		margin-left: auto;
+	    width: 2.4rem;
+	    height: 3.6rem;
+	    display: flex;
+	    flex-direction: column;
+
+		i{
+			cursor: pointer;
+			// prevent overlapping
+			height: 1.2rem;
+
+			&:hover,
+			&.active{
+				color: $color-primary;
+			}
+		}
+	}
+}
+
+.trow-wrapper{
+	&:nth-child(even){
+		background: $palette-grey-50;
+	}
+
+	&:hover{
+		background: $palette-grey-100;
+	}
+
+	.trow{
+		padding:1.6rem 0;
+		border-bottom: 1px solid $palette-grey-200;
+		align-items: center;
+
+		& > *{
+			padding: 0 .5rem;
+			white-space: normal;
+			flex-shrink: 0;
+
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				flex: 1;
+				padding-right: 0;
+				justify-content: flex-end;
+			}
+		}
+	}
+}
+
+@media (max-width: (#{map-get($grid-breakpoints, xl)} - 1px) ){
+	.xl{
+		&.trow{
+			flex-wrap: wrap;
+			& > *{
+				width: 25% !important;
+				&:first-child{
+					padding-left: .5rem;
+				}
+				&:last-child{
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: (#{map-get($grid-breakpoints, lg)} - 1px) ){
+	.xl,.lg{
+		&.trow{
+			flex-wrap: wrap;
+			& > *{
+				width: percentage(1/3) !important;
+				&:first-child{
+					padding-left: .5rem;
+				}
+				&:last-child{
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: (#{map-get($grid-breakpoints, md)} - 1px) ){
+	.xl,.lg,.md{
+		&.trow{
+			flex-wrap: wrap;
+			& > *{
+				width: percentage(1/3) !important;
+				&:first-child{
+					padding-left: .5rem;
+				}
+				&:last-child{
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: (#{map-get($grid-breakpoints, sm)} - 1px) ){
+	.xl,.lg,.md,.sm{
+		&.trow{
+			flex-wrap: wrap;
+			& > *{
+				width: 50% !important;
+				&:first-child{
+					padding-left: .5rem;
+				}
+				&:last-child{
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: (#{map-get($grid-breakpoints, xs)} - 1px) ){
+	.xl,.lg,.md,.sm,.xs{
+		&.trow{
+			flex-wrap: wrap;
+			& > *{
+				width: 100% !important;
+				&:first-child{
+					padding-left: .5rem;
+				}
+				&:last-child{
+					justify-content: flex-start;
+				}
+			}
+		}
+	}
+}

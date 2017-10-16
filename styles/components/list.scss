@@ -1,0 +1,67 @@
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/globals";
+
+.nav-drawer-list{
+	.parent-item{
+		.right-icon{
+			transition: transform 300ms ease-in;
+			transform: rotate(0deg);
+			transform-origin: 2.4rem 50%;
+
+			[data-react-toolbox="font-icon"]{
+				font-size: 1.6rem;
+			}
+		}
+
+		& + ul{
+			padding: 0;
+			max-height: 0;
+			overflow-y: hidden;
+			border-left: 3px solid $color-primary;
+			transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+			a{
+				color: #757575;
+				display: flex;
+				width: 100%;
+				min-height: 4.8rem;
+
+				& > *{
+					align-self: center;
+				}
+			}
+
+			a.child-link-active{
+				color: $color-black;
+			}
+		}
+
+		&.active{
+			background-color: $palette-grey-200;
+
+			.right-icon{
+				transform: rotate(135deg);
+			}
+
+			& + ul{
+				max-height: 500px; /* approximate max height */
+			}
+		}
+	}
+
+	hr{
+		margin: 0 !important;
+	}
+}
+
+.nav-drawer-list-2{
+	a[data-react-toolbox="link"]{
+		opacity: .8;
+		color: #757575;
+		font-size: 1.4rem;
+	}
+
+	hr{
+		margin: 0 !important;
+	}
+}

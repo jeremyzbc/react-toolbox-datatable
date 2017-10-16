@@ -1,0 +1,10 @@
+@mixin label($padding: .2rem 1rem, $color: $color-white, $font-size: $font-size-tiny) {
+  &{
+  	display: inline-block;
+  	text-align: center;
+  	color: $color;
+	padding: $padding;
+	font-variant: small-caps;
+	font-size: $font-size;
+  }
+}

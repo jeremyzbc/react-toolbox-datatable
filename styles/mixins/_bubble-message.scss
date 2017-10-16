@@ -1,0 +1,21 @@
+@mixin bubble-message($padding: 1rem, $bgcolor: $palette-grey-100) {
+  padding: $padding;
+  background: $bgcolor;
+  position: relative;
+
+  &:hover{
+  	box-shadow: $box-shadow-well;
+  }
+
+  &:before{
+  	content: '';
+  	width: 0;
+  	height: 0;
+  	position: absolute;
+  	left: -1rem;
+  	top: 1rem;
+    border-right: 1rem solid $bgcolor;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+  }
+}

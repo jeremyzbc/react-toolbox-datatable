@@ -1,0 +1,19 @@
+@import "~react-toolbox/lib/colors";
+@import "~react-toolbox/lib/globals";
+
+.hide-bottom-bar{
+	border-bottom: none;
+}
+
+.icon-text-small{
+	top: $font-size-small;
+}
+
+.hint-text-small{
+	font-size: $font-size-small;
+	top: 2 * $font-size-small;
+}
+
+[data-react-toolbox='input'].icon-align-left{
+	margin-left: 3.2rem;
+}
